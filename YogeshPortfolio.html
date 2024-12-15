@@ -5,165 +5,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yogesh M. Makvana - BCA Portfolio</title>
     <style>
+                    
                /* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+               * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            /* Body & Fonts */
+            body {
+                font-family: Arial, sans-serif;
+                background: url('coding-background.jpg') no-repeat center center fixed;
+                background-size: cover;
+                color: #fff;
+                overflow-x: hidden;
+                animation: backgroundAnimation 15s infinite alternate;
+            }
+            
+            /* Navbar Styling */
+            .navbar {
+                background-color: rgba(0, 0, 0, 0.6);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+            }
+            
+            .navbar .logo h2 {
+                color: #fff;
+            }
+            
+            .nav-links {
+                list-style: none;
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin-left: 20px;
+            }
+            
+            .nav-links a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 16px;
+                transition: color 0.3s ease, transform 0.3s;
+            }
+            
+            .nav-links a:hover {
+                color: #ff6600;
+                transform: scale(1.1);
+            }
+            
+            /* Section Styling */
+            section {
+                padding: 60px 0;
+                margin-top: 60px;
+            }
+            
+            .container {
+                width: 80%;
+                margin: 0 auto;
+            }
+            
+            .section-heading {
+                font-size: 36px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            /* About Section */
+            .about-section {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 8px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+                padding: 40px;
+            }
+            
+            .about-section p {
+                font-size: 18px;
+                line-height: 1.6;
+                text-align: center;
+            }
+            
+            /* Languages Section */
+            .languages-section {
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 50px;
+            }
+            
+            .languages-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .language-card {
+                background-color: #fff;
+                border: 2px solid #ddd;
+                border-radius: 8px;
+                margin: 10px;
+                padding: 30px;
+                text-align: center;
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                width: 150px;
+            }
+            
+            .language-card:hover {
+                transform: scale(1.1);
+                box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+            }
+            
+            .language-card h2 {
+                font-size: 22px;
+                font-weight: 600;
+            }
+            
+            /* Footer */
+            .footer {
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+            
+            /* Keyframe Animation for Background Color */
+            @keyframes backgroundAnimation {
+                0% {
+                    background-color: #2c3e50;
+                }
+                50% {
+                    background-color: #34495e;
+                }
+                100% {
+                    background-color: #2c3e50;
+                }
+            }
+            
+            /* Animation for Sections */
+            @keyframes slideIn {
+                from {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            
+            .about-section, .languages-section, .contact-section {
+                animation: slideIn 0.8s ease-out;
+            }
 
-/* Body & Fonts */
-body {
-    font-family: Arial, sans-serif;
-    background: url('coding-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    overflow-x: hidden;
-    animation: backgroundAnimation 15s infinite alternate;
-}
+          
+              
+              img {
+                display: inline-block; /* Ensures the image behaves like an inline element */
+                align-items: center;
+                
+              }
 
-/* Navbar Styling */
-.navbar {
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
+              
+              <!-- add the footer bar code-->
 
-.navbar .logo h2 {
-    color: #fff;
-}
+              h5 {
+                font-size: 2em;
+                color: #4CAF50;
+                margin: 10px 0;
+            }
+    
+            h3 {
+                font-size: 1.5em;
+                color: #444;
+                margin-top: 20px;
+            }
+    
+            p {
+                font-size: 1em;
+                color: #555;
+                line-height: 1.6;
+            }
+    
+            /* Styling the details section */
+            details {
+                background-color: #ffffff;
+                border: 2px solid #ddd;
+                border-radius: 8px;
+                margin: 10px auto;
+                padding: 20px;
+                width: 80%;
+                max-width: 600px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            details:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+    
+            summary {
+                font-size: 1.2em;
+                font-weight: bold;
+                cursor: pointer;
+                color: #3e8e41;
+                transition: color 0.3s ease;
+            }
+    
+            summary:hover {
+                color: #2a6d2f;
+            }
+    
+            hr {
+                border: 1px solid #ddd;
+                width: 80%;
+                margin: 20px auto;
+            }
+    
+            /* Cursor animation */
+            body {
+                cursor: url('https://cdn.jsdelivr.net/gh/wolfram77/cursors/cursor3.png'), auto;
+            }
+    
+            /* Custom Cursor Animation */
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.2);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+    
+            .animated-cursor {
+                animation: pulse 1.5s infinite;
+            }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
+            /* media queries for the responsive website */
 
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease, transform 0.3s;
-}
-
-.nav-links a:hover {
-    color: #ff6600;
-    transform: scale(1.1);
-}
-
-/* Section Styling */
-section {
-    padding: 60px 0;
-    margin-top: 60px;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.section-heading {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* About Section */
-.about-section {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 40px;
-}
-
-.about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Languages Section */
-.languages-section {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 50px;
-}
-
-.languages-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.language-card {
-    background-color: #fff;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 150px;
-}
-
-.language-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
-}
-
-.language-card h2 {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-/* Footer */
-.footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Keyframe Animation for Background Color */
-@keyframes backgroundAnimation {
-    0% {
-        background-color: #2c3e50;
-    }
-    50% {
-        background-color: #34495e;
-    }
-    100% {
-        background-color: #2c3e50;
-    }
-}
-
-/* Animation for Sections */
-@keyframes slideIn {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.about-section, .languages-section, .contact-section {
-    animation: slideIn 0.8s ease-out;
-}
-
+           @media(width:500px){
+                body{
+                    background-color: red;
+                }
+            }
+            
+ 
+ 
 </style>
 </head>
 <body>
@@ -216,32 +314,75 @@ section {
         </div>
     </section>
 
+   
+    <center>    <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg" ></center>
+ <br>
+  
+  
+        
+  
+  <hr><h3>
+ <details>
+    <summary>Buy&sell web service in india</summary>
+    <p>- we are providing web tech solution IT last 2 years with many best work awarded.</p>
+ </details>
+ <hr>
+ <details>
+    <summary>Categories</summary>
+    <p> -web front-end<br> -web back-end<br>-fullstack <br> -fullstack with hosting <br>-fullstack with hosting and database </p>
+ 
+ 
+ </details>
+ <hr>
+ 
+ </details>
+ <hr>
+ <details>
+    <summary>Popular location</summary>
+    <p>-Bhavnagar<br>-Ahmedabad<br>-Rajkot</p>
+ 
+ </details>
+ <hr>
+ 
+ <details>
+    <summary>Contact Us</summary>
+    <p> E-mail:- makwanay324@gmail.com</p>
+ 
+ </details>
+ 
+ <hr>
+ <details>
+    <summary>Follow Us</summary>
+    <p> Instagram:- yogeshhhhhh._</p>
+ 
+ </details>
+</h3>
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h1 class="section-heading">Contact Me</h1>
-            <p>If you want to get in touch or discuss a project, feel free to contact me.</p>
-            <p>Email:makwanay324@gmail.com</p>
+            <h3 class="section-heading" style="color:black">Contact Me</h3>
+            <p><h1>If you want to get in touch or discuss a project, feel free to contact me.</h1></p>
+            <p style="color:black">Email:makwanay324@gmail.com</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 Yogesh M. Makvana. All rights reserved.</p>
+        <p>&copy; 2024 Yogesh Makvana. All rights reserved.</p>
     </footer>
 
-    <script> 
-                 // Animation for navbar links hover
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach(link => {
-    link.addEventListener('mouseover', () => {
-        link.style.transform = 'scale(1.1)';
-    });
-    link.addEventListener('mouseout', () => {
-        link.style.transform = 'scale(1)';
-    });
-});
+    <script > 
 
+                                         // Animation for navbar links hover
+              const navLinks = document.querySelectorAll('.nav-links a');
+              navLinks.forEach(link => {
+                  link.addEventListener('mouseover', () => {
+                      link.style.transform = 'scale(1.1)';
+                  });
+                  link.addEventListener('mouseout', () => {
+                      link.style.transform = 'scale(1)';
+                  });
+              });
 </script>
 </body>
 </html>
